@@ -11,6 +11,23 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+            storePassword "android"
+            keyAlias "app"
+            keyPassword "android"
+        }
+
+        release {
+            storeFile file("../release.keystore")
+            storePassword "android"
+            keyAlias "app"
+            keyPassword "android"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
