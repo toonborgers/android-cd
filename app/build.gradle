@@ -31,6 +31,7 @@ android {
     buildTypes {
         buildTypes {
             release {
+                versionNameSuffix "-" + getDate('yyyyMMddHHmmss')
                 minifyEnabled false
                 proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
                 signingConfig signingConfigs.release
@@ -38,6 +39,7 @@ android {
             }
 
             debug {
+                versionNameSuffix "-" + getDate('yyyyMMddHHmmss')
                 minifyEnabled false
                 versionNameSuffix "-" + getDate('yyyyMMddHHmmss')
                 signingConfig signingConfigs.debug
