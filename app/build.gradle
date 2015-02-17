@@ -8,7 +8,7 @@ android {
         applicationId "be.cegeka.androidcd"
         minSdkVersion 14
         targetSdkVersion 21
-        versionCode 1
+        versionCode getVersionCode()
         versionName "1.0"
     }
 
@@ -57,4 +57,8 @@ def getDate(format) {
     def date = new Date()
     def formattedDate = date.format(format)
     return formattedDate
+}
+
+def getVersionCode(){
+    return System.getenv("BUILD_NUMBER") ?: 1
 }
